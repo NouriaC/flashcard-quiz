@@ -8,9 +8,15 @@ export default function Flashcard({ flashcard }) {
         onClick={() => setFlip(!flip)}
         >
             <div className="front">
-
+                {flashcard.question}
+                <div className="flashcard-options">
+                    {flashcard.options.map(option => {
+                        return <div className="flashcard-option">{option}</div>
+                    })}
+                </div>
             </div>
-            {flip ? flashcard.answer : flashcard.question}
+            <div className="back">{flashcard.answer}</div>
+            {/* {flip ? flashcard.answer : flashcard.question} */}
         </div>
     )
 }

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import FlashcardList from './FlashcardList';
+import './App.css';
 
 
 function App() {
